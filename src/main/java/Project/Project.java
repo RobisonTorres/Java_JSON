@@ -109,5 +109,6 @@ public class Project {
         readProducts();
         System.out.println(updateProduct());
         System.out.println(deleteProduct());
+        System.out.println("Test commit.");
     }
 }
