@@ -1,0 +1,9 @@
+{
+  "Headphones" : [ 15.99, 10 ],
+  "Home audio" : [ 80.99, 15 ],
+  "Laptop" : [ 200.0, 10 ],
+  "Smartphone" : [ 70.0, 40 ],
+  "Tablet" : [ 99.99, 2 ],
+  "Mouse" : [ 15.28, 50 ],
+  "Keyboard" : [ 19.99, 10 ]
+}
