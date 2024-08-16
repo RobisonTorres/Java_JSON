@@ -47,12 +47,12 @@ public class Project {
                 priceQuantity.add(productQuantity);
                 ((ObjectNode) rootNode).set(productName, priceQuantity);
                 saveChanges(rootNode);
-                return "Success! " + productName + " has been added or update in the stock.";
+                return "Success! " + productName + " has been added or update in the stock.\n";
                 } else {
-                    return "Error! Invalid name, price or quantity.";
+                    return "Error! Invalid name, price or quantity.\n";
                 }
             } catch (Exception e) {
-                return "Error! Invalid input.";
+                return "Error! Invalid input.\n";
             }
         }
     public static String createProduct() throws IOException {
@@ -79,6 +79,7 @@ public class Project {
             JsonNode item = field.getValue();
             System.out.format("%-15s%-10s%-10s%n", key, item.get(0).asText(), item.get(1).asText());
         }
+        System.out.println();
     }
     public static String updateProduct() throws IOException {
 
@@ -89,7 +90,7 @@ public class Project {
         if (allProducts().contains(productName)) {
             return testUserInput(productName);
         } else {
-            return "Error!" + productName + " is not present in the stock.";
+            return "Error!" + productName + " is not present in the stock.\n";
         }
     }
     public static String deleteProduct() throws IOException{
@@ -102,39 +103,46 @@ public class Project {
         if(allProducts().contains(deleteProduct)) {
             ((ObjectNode) rootNode).remove(deleteProduct);
             saveChanges(rootNode);
-            return "Success! " + deleteProduct + " has been deleted.";
+            return "Success! " + deleteProduct + " has been deleted.\n";
         } else {
-            return "Error! " + deleteProduct + " is not present in the stock.";
+            return "Error! " + deleteProduct + " is not present in the stock.\n";
         }
     }
     public static void main(String[] args) throws IOException {
 
-        System.out.println("Menu options:\n");
-        System.out.println("1. Add new product");
-        System.out.println("2. Update a product");
-        System.out.println("3. Show all products");
-        System.out.println("4. Delete a product");
-        System.out.println("5. Exit the program\n");
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter your option: ");
-        String inputOption = input.next();
-        System.out.println();
-        switch (inputOption) {
-            case "1":
-                System.out.println(createProduct());
-                break;
-            case "2":
-                System.out.println(updateProduct());
-                break;
-            case "3":
-                readProducts();
-                break;
-            case "4":
-                System.out.println(deleteProduct());
-            case "5":
-                break;
-            default:
-                System.out.println("There no match.");
+        // Stock App Menu.
+        int inputOption = 0;
+        while (inputOption != 5){
+            System.out.println("*****Menu Options**** ");
+            System.out.println("=====================");
+            System.out.println("*********************");
+            System.out.println("1. Add new product");
+            System.out.println("2. Update a product");
+            System.out.println("3. Show all products");
+            System.out.println("4. Delete a product");
+            System.out.println("5. Exit the program");
+            System.out.println("*********************");
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter your option: ");
+            inputOption = input.nextInt();
+            System.out.println();
+            switch (inputOption) {
+                case 1:
+                    System.out.println(createProduct());
+                    break;
+                case 2:
+                    System.out.println(updateProduct());
+                    break;
+                case 3:
+                    readProducts();
+                    break;
+                case 4:
+                    System.out.println(deleteProduct());
+                case 5:
+                    break;
+                default:
+                    System.out.println("There no match.");
+            }
         }
     }
 }
