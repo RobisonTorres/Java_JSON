@@ -11,10 +11,18 @@ import java.util.*;
 public class Project {
 
     public static File file = new File("src\\stockProducts.json");
+
     public static ObjectMapper objectMapper = new ObjectMapper();
+
+        /* The ObjectMapper is a core class in the Jackson library that allows
+        for reading and writing JSON data. It can convert JSON strings to Java
+        objects (deserialization) and Java objects to JSON strings (serialization).*/
+
     public static JsonNode rootNode() throws IOException{
 
-        // This function creates the objectMapper.
+        /* This function creates the JsonNode. JsonNode is a class provided
+        by Jackson that represents a node in the JSON tree. It allows you to
+        navigate and manipulate the JSON structure.*/
         return objectMapper.readTree(file);
     }
     public static void saveChanges(JsonNode rootNode) throws IOException{
