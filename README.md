@@ -37,7 +37,7 @@ To use this repository, follow these steps:
     ```bash
     cd Stock_System\src\main\java\Project.
 
-4. Execute the Project.java.
+4. Execute the Main.java.
 
 ## Example
 
