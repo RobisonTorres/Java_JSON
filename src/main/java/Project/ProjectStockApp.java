@@ -8,10 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class Project {
+public class ProjectStockApp {
 
     public static File file = new File("src\\stockProducts.json");
-
     public static ObjectMapper objectMapper = new ObjectMapper();
 
         /* The ObjectMapper is a core class in the Jackson library that allows
@@ -114,43 +113,6 @@ public class Project {
             return "Success! " + deleteProduct + " has been deleted.\n";
         } else {
             return "Error! " + deleteProduct + " is not present in the stock.\n";
-        }
-    }
-    public static void main(String[] args) throws IOException {
-
-        // Stock App Menu.
-        int inputOption = 0;
-        while (inputOption != 5){
-            System.out.println("*****Menu Options**** ");
-            System.out.println("=====================");
-            System.out.println("*********************");
-            System.out.println("1. Add new product");
-            System.out.println("2. Update a product");
-            System.out.println("3. Show all products");
-            System.out.println("4. Delete a product");
-            System.out.println("5. Exit the program");
-            System.out.println("*********************");
-            Scanner input = new Scanner(System.in);
-            System.out.print("Enter your option: ");
-            inputOption = input.nextInt();
-            System.out.println();
-            switch (inputOption) {
-                case 1:
-                    System.out.println(createProduct());
-                    break;
-                case 2:
-                    System.out.println(updateProduct());
-                    break;
-                case 3:
-                    readProducts();
-                    break;
-                case 4:
-                    System.out.println(deleteProduct());
-                case 5:
-                    break;
-                default:
-                    System.out.println("There no match.");
-            }
         }
     }
 }
