@@ -1,8 +1,7 @@
 # Stock Management System - Java
 
 ## Intro
-
-This project provides a Stock Management System, allowing users to perform CRUD operations on stock items present in json file.
+This project features a basic Stock Management System, enabling users to perform CRUD operations on stock items stored in a JSON file. The primary goal of this project is to demonstrate the use of Java for handling JSON data.
 
 ## Features 
 
