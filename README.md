@@ -1,11 +1,13 @@
-# Stock Management System - Java
+# Simple CRUD System in Java with JSON Integration
 
 ## Intro
-This project features a basic Stock Management System, enabling users to perform CRUD operations on stock items stored in a JSON file. The primary goal of this project is to demonstrate the use of Java for handling JSON data.
+***The primary goal of this project is to demonstrate the use of Java for handling JSON data.***
 
 ## Features 
 
- - ```Project.java``` - This script gathers all the app's functions.
+ - ```Main.java``` - This script executes all the app's functions.
+  
+ - ```ProjectStockApp.java``` - This script gathers all the app's functions.
  Functions present in this file are:
   1. checkInput - Checks if the user's input is valid.
   2. add - Adds new products to the stock.
@@ -27,14 +29,11 @@ To use this repository, follow these steps:
 1. Clone the repository to your local machine.
 
     ```bash
-    git clone https://github.com/RobisonTorres/Stock_System.git
+    git clone https://github.com/RobisonTorres/Java_JSON.git
 
 2. Install required Maven dependencies.
 
 3. Navigate to the directory.
-
-    ```bash
-    cd Stock_System\src\main\java\Project.
 
 4. Execute the Main.java.
 
